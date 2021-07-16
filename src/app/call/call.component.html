@@ -1,0 +1,16 @@
+<div class='container-fluid'>
+    <div class='row p-2'>
+      <div class='col text-center'>
+        <div id='video-wrapper'>
+          <video #remoteVideo id='remote-video' autoplay playsinline></video>
+          <video #localVideo id='local-video' autoplay playsinline [muted]=true></video>
+          <mat-slide-toggle id='stop-camera' (change)='stopCamera($event)'></mat-slide-toggle>
+        </div>
+      </div>
+    </div>
+    <div class='buttons'>
+      <button mat-raised-button color='blue' class='m-2' [disabled]='isCallStarted$ | async' (click)='showModal(false)'>Start Call</button>
+      <button mat-raised-button class='m-2' [disabled]='isCallStarted$ | async' (click)='showModal(true)'>Join Call</button>
+      <button mat-raised-button color='warn' class='m-2' [disabled]='!(isCallStarted$ | async)' (click)='endCall()'>End Call</button>
+    </div>
+</div>

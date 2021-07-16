@@ -1,0 +1,50 @@
+#video-wrapper {
+	text-align: center;
+    background-color: #343434;
+	border-radius: 5px;
+}
+
+#remote-video {
+	max-width: 100%;
+	max-height: 100vh;
+	width: 1500px;
+	height: 600px;
+	border-radius: 5px;
+}
+
+#local-video {
+    z-index: 1;
+    position: absolute;
+    right: 1rem;
+	bottom: 0.05rem;
+	width: 340px;
+	height: 300px;
+	border: 3px solid white;
+	border-radius: 5px;
+}
+
+#stop-camera{
+	z-index: 1;
+	position: absolute;
+	right: 19.5rem;
+	bottom: 17rem;
+	color: white;
+}
+
+.buttons{
+	text-align: center;
+	justify-content: center;
+}
+
+.mat-blue{
+    color: white;
+    background-color: green;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #50C878;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #50C878;
+}
